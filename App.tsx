@@ -20,17 +20,11 @@ const App = (): JSX.Element => {
     <>
       <Provider store={store}>
         <StatusBar barStyle="dark-content" />
-        <SafeAreaView>
-          <ScrollView
-            contentInsetAdjustmentBehavior="automatic"
-            style={styles.scrollView}>
-            <View style={styles.titleContainer}>
-              <Text style={styles.title} testID="title">
-                Recipies
-              </Text>
-              <RecipeList />
-            </View>
-          </ScrollView>
+        <SafeAreaView style={styles.container}>
+          <Text style={styles.title} testID="title">
+            Recipies
+          </Text>
+          <RecipeList />
         </SafeAreaView>
       </Provider>
     </>
@@ -46,8 +40,11 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 30,
   },
-  scrollView: {
+  container: {
     backgroundColor: Colors.lighter,
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
   },
 
   body: {

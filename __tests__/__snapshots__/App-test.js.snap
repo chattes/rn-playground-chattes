@@ -18,36 +18,27 @@ exports[`<App /> matches snapshot 1`] = `
       barStyle="dark-content"
       showHideTransition="fade"
     />
-    <ForwardRef(SafeAreaView)>
-      <ScrollView
-        contentInsetAdjustmentBehavior="automatic"
+    <ForwardRef(SafeAreaView)
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#F3F3F3",
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <Text
         style={
           Object {
-            "backgroundColor": "#F3F3F3",
+            "fontSize": 30,
           }
         }
+        testID="title"
       >
-        <View
-          style={
-            Object {
-              "alignItems": "center",
-              "display": "flex",
-              "justifyContent": "center",
-            }
-          }
-        >
-          <Text
-            style={
-              Object {
-                "fontSize": 30,
-              }
-            }
-            testID="title"
-          >
-            Recipies
-          </Text>
-        </View>
-      </ScrollView>
+        Recipies
+      </Text>
+      <RecipeList />
     </ForwardRef(SafeAreaView)>
   </Provider>
 </Fragment>
