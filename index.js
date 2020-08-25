@@ -1,6 +1,8 @@
 /**
  * @format
  */
+import {LogBox} from 'react-native';
+// LogBox.ignoreWarnings(['Remote debugger']);
 
 import {AppRegistry} from 'react-native';
 import App from './App';
